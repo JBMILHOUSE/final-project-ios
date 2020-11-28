@@ -15,6 +15,10 @@
 		2B8B98A0257029770048B1C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8B989E257029770048B1C4 /* LaunchScreen.storyboard */; };
 		2B8B98A925702D140048B1C4 /* segundaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B98A825702D140048B1C4 /* segundaViewController.swift */; };
 		2B8B98AC25702F1D0048B1C4 /* terceiraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8B98AB25702F1D0048B1C4 /* terceiraViewController.swift */; };
+		2BC20F76257202E900641B19 /* Rest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC20F75257202E900641B19 /* Rest.swift */; };
+		2BC20F79257204FD00641B19 /* dadosFoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC20F78257204FD00641B19 /* dadosFoto.swift */; };
+		2BC20F7C2572060700641B19 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC20F7B2572060700641B19 /* utils.swift */; };
+		2BC20F802572099700641B19 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC20F7F2572099700641B19 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		2B8B98A1257029770048B1C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B8B98A825702D140048B1C4 /* segundaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = segundaViewController.swift; sourceTree = "<group>"; };
 		2B8B98AB25702F1D0048B1C4 /* terceiraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = terceiraViewController.swift; sourceTree = "<group>"; };
+		2BC20F75257202E900641B19 /* Rest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rest.swift; sourceTree = "<group>"; };
+		2BC20F78257204FD00641B19 /* dadosFoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dadosFoto.swift; sourceTree = "<group>"; };
+		2BC20F7B2572060700641B19 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
+		2BC20F7F2572099700641B19 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +77,10 @@
 				2B8B98A1257029770048B1C4 /* Info.plist */,
 				2B8B98A825702D140048B1C4 /* segundaViewController.swift */,
 				2B8B98AB25702F1D0048B1C4 /* terceiraViewController.swift */,
+				2BC20F75257202E900641B19 /* Rest.swift */,
+				2BC20F78257204FD00641B19 /* dadosFoto.swift */,
+				2BC20F7B2572060700641B19 /* utils.swift */,
+				2BC20F7F2572099700641B19 /* File.swift */,
 			);
 			path = TrabalhoFinal;
 			sourceTree = "<group>";
@@ -146,7 +158,11 @@
 				2B8B98A925702D140048B1C4 /* segundaViewController.swift in Sources */,
 				2B8B9898257029750048B1C4 /* ViewController.swift in Sources */,
 				2B8B98AC25702F1D0048B1C4 /* terceiraViewController.swift in Sources */,
+				2BC20F76257202E900641B19 /* Rest.swift in Sources */,
+				2BC20F79257204FD00641B19 /* dadosFoto.swift in Sources */,
+				2BC20F7C2572060700641B19 /* utils.swift in Sources */,
 				2B8B9894257029750048B1C4 /* AppDelegate.swift in Sources */,
+				2BC20F802572099700641B19 /* File.swift in Sources */,
 				2B8B9896257029750048B1C4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
