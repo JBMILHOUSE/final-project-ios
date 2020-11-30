@@ -22,7 +22,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXk-Df-acq">
                                 <rect key="frame" x="50" y="465" width="314" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="selecionar foto"/>
+                                <state key="normal" title="Selecionar Foto"/>
                                 <connections>
                                     <action selector="selecionador:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4XT-pj-Yi2"/>
                                 </connections>
@@ -30,7 +30,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APV-HR-8Bb">
                                 <rect key="frame" x="50" y="560" width="314" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="upload"/>
+                                <state key="normal" title="Fazer Upload"/>
+                                <connections>
+                                    <action selector="fazerUpload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="71v-eu-hhp"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -50,6 +53,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Ulf-VU-JEb"/>
                     <connections>
+                        <outlet property="btnUpload" destination="APV-HR-8Bb" id="h77-9d-hSW"/>
                         <outlet property="ivImage" destination="eXG-og-Qaq" id="WtC-8T-shm"/>
                     </connections>
                 </viewController>
