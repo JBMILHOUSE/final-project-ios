@@ -40,7 +40,7 @@ class respostaRest: Codable{
 
 class Rest {
     
-    private static let basePath = "https://www.slmm.com.br/DS403?ra="
+    private static let basePath = "https://www.slmm.com.br/DS403/index.php"
     
     private static let configuration: URLSessionConfiguration = {
         let config = URLSessionConfiguration.default
