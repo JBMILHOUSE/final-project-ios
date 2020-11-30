@@ -23,7 +23,7 @@ class file: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDel
         self.viewController?.present(selecionador, animated: true, completion: nil)
     }
     
-    func selecionaImagem(_ viewController: UIViewController, _ retorno : @escaping((UIImage)-> ())) {
+    func selecionadorImagem(_ viewController: UIViewController, _ retorno : @escaping((UIImage)-> ())) {
         retornarSelecionador = retorno
         self.viewController = viewController
         
@@ -42,12 +42,51 @@ class file: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDel
         viewController.present(alerta, animated: true, completion: nil)
     }
     
+    // Tirar foto
+    func abrirCamera(){
+        
+        if(UIImagePickerController.isSourceTypeAvailable(.camera)) {
+            //let selecionador = UIImagePickerController();
+            selecionador.sourceType = .camera
+            selecionador.delegate = self
+            
+            self.viewController?.present(selecionador, animated: true, completion: nil)
+            
+            print("após camera start")
+        } else {
+            let alerta = UIAlertController(title: "Alerta", message: "Você não tem câmera", preferredStyle: .actionSheet)
+            
+            let cancelar = UIAlertAction(title: "Cancelar", style: .cancel){
+                UIAlertAction in
+            }
+            alerta.addAction(cancelar)
+            self.viewController?.present(alerta, animated: true, completion: nil)
+        }
+    }
+    
+    func selecionadorImagemSelfie(_ viewController: UIViewController, _ retorno: @escaping ((UIImage) -> ())) {
+        
+        retornarSelecionador = retorno;
+        
+        self.viewController = viewController;
+        
+        let camera = UIAlertAction(title: "Camera", style: .default) {
+            UIAlertAction in self.abrirCamera()
+        }
+        alerta.addAction(camera)
+        
+        alerta.popoverPresentationController?.sourceView = self.viewController!.view
+        viewController.present(alerta, animated: true, completion: nil)
+    }
+    
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         picker.dismiss(animated: true, completion: nil)
+        
         guard let image = info[.originalImage] as? UIImage else {
             fatalError("Esperar uma imagem \(info)")
         }

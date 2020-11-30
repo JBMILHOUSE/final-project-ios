@@ -22,7 +22,7 @@ class ViewController: UIViewController {
 
 
     @IBAction func selecionador(_ sender: Any) {
-        file().selecionaImagem(self) {
+        file().selecionadorImagem(self) {
             ivImage in self.ivImage.image = ivImage
         }
     }

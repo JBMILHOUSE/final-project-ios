@@ -68,14 +68,55 @@
                     <view key="view" contentMode="scaleToFill" id="OxX-zb-x7x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8qW-JF-5Oq">
+                                <rect key="frame" x="0.0" y="44" width="414" height="390"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nml-a2-60e">
+                                <rect key="frame" x="50" y="469" width="314" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Tirar Foto"/>
+                                <connections>
+                                    <action selector="tirarFoto:" destination="Atx-SX-cDD" eventType="touchUpInside" id="0E6-ms-hmx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yez-uV-cBn">
+                                <rect key="frame" x="50" y="567" width="314" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="fazer Upload"/>
+                                <connections>
+                                    <action selector="fazerUpload:" destination="Atx-SX-cDD" eventType="touchUpInside" id="cvX-Z4-lWf"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="nlT-nO-NAg"/>
                         <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <constraints>
+                            <constraint firstItem="yez-uV-cBn" firstAttribute="top" secondItem="Nml-a2-60e" secondAttribute="bottom" constant="50" id="0Zn-2N-S1V"/>
+                            <constraint firstItem="Nml-a2-60e" firstAttribute="top" secondItem="8qW-JF-5Oq" secondAttribute="bottom" constant="40" id="0zq-cx-mfU"/>
+                            <constraint firstItem="Nml-a2-60e" firstAttribute="leading" secondItem="nlT-nO-NAg" secondAttribute="leading" constant="50" id="3uq-KM-FjN"/>
+                            <constraint firstItem="yez-uV-cBn" firstAttribute="leading" secondItem="nlT-nO-NAg" secondAttribute="leading" constant="50" id="7m6-Cs-mYb"/>
+                            <constraint firstItem="8qW-JF-5Oq" firstAttribute="trailing" secondItem="nlT-nO-NAg" secondAttribute="trailing" id="AXg-0E-iSl"/>
+                            <constraint firstItem="8qW-JF-5Oq" firstAttribute="top" secondItem="nlT-nO-NAg" secondAttribute="top" id="EMa-4v-fHc"/>
+                            <constraint firstItem="nlT-nO-NAg" firstAttribute="trailing" secondItem="Nml-a2-60e" secondAttribute="trailing" constant="50" id="FfI-nf-lpC"/>
+                            <constraint firstItem="nlT-nO-NAg" firstAttribute="bottom" secondItem="yez-uV-cBn" secondAttribute="bottom" constant="198" id="LyE-4W-HDS"/>
+                            <constraint firstItem="Nml-a2-60e" firstAttribute="top" secondItem="8qW-JF-5Oq" secondAttribute="bottom" constant="35" id="MHi-wH-yO8"/>
+                            <constraint firstItem="yez-uV-cBn" firstAttribute="top" secondItem="Nml-a2-60e" secondAttribute="bottom" constant="46" id="Vqq-dw-0Oj"/>
+                            <constraint firstItem="nlT-nO-NAg" firstAttribute="trailing" secondItem="yez-uV-cBn" secondAttribute="trailing" constant="50" id="XGT-xm-sX7"/>
+                            <constraint firstItem="Nml-a2-60e" firstAttribute="top" secondItem="8qW-JF-5Oq" secondAttribute="bottom" constant="35" id="eab-8K-3Vy"/>
+                            <constraint firstItem="yez-uV-cBn" firstAttribute="top" secondItem="Nml-a2-60e" secondAttribute="bottom" constant="50" id="sGb-PK-UQX"/>
+                            <constraint firstItem="8qW-JF-5Oq" firstAttribute="leading" secondItem="nlT-nO-NAg" secondAttribute="leading" id="ttC-eN-2dg"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="zuN-IY-3QY"/>
+                    <connections>
+                        <outlet property="btnUpload" destination="yez-uV-cBn" id="Zah-AY-HHS"/>
+                        <outlet property="ivFoto" destination="8qW-JF-5Oq" id="CXR-zg-vaK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7LN-DS-hFx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="892"/>
+            <point key="canvasLocation" x="137.68115942028987" y="891.96428571428567"/>
         </scene>
         <!--Item-->
         <scene sceneID="xo9-PB-TZh">

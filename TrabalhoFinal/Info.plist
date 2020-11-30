@@ -62,5 +62,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>Bora tirar aquela selfie</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Pode selecionar</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Permitir acesso a photolibery</string>
 </dict>
 </plist>
