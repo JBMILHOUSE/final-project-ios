@@ -35,18 +35,27 @@
                                     <action selector="fazerUpload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="71v-eu-hhp"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pml-Ht-qaK">
+                                <rect key="frame" x="20" y="634" width="374" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
+                            <constraint firstItem="Pml-Ht-qaK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="58D-Tg-RXh"/>
                             <constraint firstItem="BXk-Df-acq" firstAttribute="top" secondItem="eXG-og-Qaq" secondAttribute="bottom" constant="20" id="6BX-yK-bcg"/>
                             <constraint firstItem="APV-HR-8Bb" firstAttribute="top" secondItem="BXk-Df-acq" secondAttribute="bottom" constant="48" id="79F-Sn-Vz1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="APV-HR-8Bb" secondAttribute="trailing" constant="50" id="7gF-nt-y2L"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BXk-Df-acq" secondAttribute="trailing" constant="50" id="8VG-fP-2eP"/>
                             <constraint firstItem="BXk-Df-acq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="FIi-rM-r8l"/>
                             <constraint firstItem="APV-HR-8Bb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Ilh-vS-yRQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pml-Ht-qaK" secondAttribute="trailing" constant="20" id="JAJ-8Q-Ao1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BXk-Df-acq" secondAttribute="bottom" constant="301" id="QzW-jO-IUR"/>
                             <constraint firstItem="eXG-og-Qaq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Td0-H8-1KM"/>
+                            <constraint firstItem="Pml-Ht-qaK" firstAttribute="top" secondItem="APV-HR-8Bb" secondAttribute="bottom" constant="28" id="TjQ-Ms-Ymi"/>
                             <constraint firstItem="eXG-og-Qaq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dTV-us-32S"/>
                             <constraint firstItem="eXG-og-Qaq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hJg-gd-GsU"/>
                         </constraints>
@@ -55,6 +64,7 @@
                     <connections>
                         <outlet property="btnUpload" destination="APV-HR-8Bb" id="h77-9d-hSW"/>
                         <outlet property="ivImage" destination="eXG-og-Qaq" id="WtC-8T-shm"/>
+                        <outlet property="lbMensagem" destination="Pml-Ht-qaK" id="Xqj-EN-ped"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -112,6 +122,7 @@
                     <connections>
                         <outlet property="btnUpload" destination="yez-uV-cBn" id="Zah-AY-HHS"/>
                         <outlet property="ivFoto" destination="8qW-JF-5Oq" id="CXR-zg-vaK"/>
+                        <outlet property="lbMensagem" destination="Pml-Ht-qaK" id="H58-RI-d5z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7LN-DS-hFx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -126,23 +137,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="o2V-yn-0f2">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <items>
+                                <navigationItem title="Title" id="bJb-s1-hgo">
+                                    <barButtonItem key="rightBarButtonItem" style="plain" systemItem="refresh" id="9h6-cL-dwu">
+                                        <connections>
+                                            <action selector="refresh:" destination="vrD-eN-24v" id="qpo-Es-9gL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </navigationItem>
+                            </items>
+                        </navigationBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="100" id="00b-2U-heT">
-                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celula" rowHeight="78" id="00b-2U-heT">
+                                <rect key="frame" x="0.0" y="72" width="414" height="78"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="00b-2U-heT" id="9zq-Sb-0ef">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="78"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIO-5U-Ldi">
-                                            <rect key="frame" x="35" y="55" width="35" height="16"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QIO-5U-Ldi">
+                                            <rect key="frame" x="20" y="48" width="97" height="19"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJs-iU-bz0">
-                                            <rect key="frame" x="35" y="19" width="33" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wJs-iU-bz0">
+                                            <rect key="frame" x="20" y="20" width="127" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -157,11 +181,13 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Item" id="oh4-0b-CIQ"/>
-                    <navigationItem key="navigationItem" title="Title" id="iyO-12-3e1"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="keO-cC-UKf"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jky-fE-Cdq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1043" y="806"/>
+            <point key="canvasLocation" x="1042.0289855072465" y="805.58035714285711"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="WO5-EV-JuP">

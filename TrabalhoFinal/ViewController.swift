@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var ivImage: UIImageView!
     
     @IBOutlet weak var btnUpload: UIButton!
+    @IBOutlet weak var lbMensagem: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -29,11 +30,11 @@ class ViewController: UIViewController {
     @IBAction func fazerUpload(_ sender: Any) {
         
         self.showSpinner(onView: self.view)
-        Rest.loadData("17289", "IOs Latoya", self.ivImage.image!, onComplete: {( respostaRest ) in
+        Rest.loadData("12345", "IOs Chris", self.ivImage.image!, onComplete: {( respostaRest ) in
             let resp = respostaRest
             print(resp.id)
             DispatchQueue.main.async {
-                print("inserido")
+                self.lbMensagem.text = "Ultimo id inserido : \(resp.id)"
             }
             self.removeSpinner()
         }, onError: {( dadoErro ) in self.removeSpinner()

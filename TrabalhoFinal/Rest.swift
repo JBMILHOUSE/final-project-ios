@@ -58,9 +58,9 @@ class Rest {
         
         //var dados : [DadosFoto] = []
         
-        let url1 = basePath.appending(ra)
-                    print(url1)
-    
+        let url1 = basePath
+        print(url1)
+        
         guard let url = URL(string: url1) else {
             print("erro /{url1}")
             onError(.urlErro)
@@ -79,12 +79,12 @@ class Rest {
     
         do {
                    
-                   let data = try JSONSerialization.data(withJSONObject: json, options: [])
-                   var request = URLRequest(url: url)
-                   request.httpMethod = "POST"
-                   request.httpBody = data
-                   request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-                   request.addValue("application/json", forHTTPHeaderField: "Accept")
+             let data = try JSONSerialization.data(withJSONObject: json,options: [])
+             var request = URLRequest(url: url)
+             request.httpMethod = "POST"
+             request.httpBody = data
+             request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+             request.addValue("application/json", forHTTPHeaderField: "Accept")
                
                    let dataTask = URLSession.shared.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) in
                 

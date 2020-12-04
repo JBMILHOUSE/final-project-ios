@@ -12,6 +12,7 @@ class segundaViewController: UIViewController {
 
     @IBOutlet weak var ivFoto: UIImageView!
     @IBOutlet weak var btnUpload: UIButton!
+    @IBOutlet weak var lbMensagem: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,7 +20,6 @@ class segundaViewController: UIViewController {
     }
     
     @IBAction func tirarFoto(_ sender: Any) {
-        
         file().selecionadorImagemSelfie(self) {imagem in print("Foto tirada")
             self.ivFoto.image = imagem
         }
@@ -28,12 +28,12 @@ class segundaViewController: UIViewController {
     @IBAction func fazerUpload(_ sender: Any) {
         
         self.showSpinner(onView: self.view)
-        Rest.loadData("17289", "IOs Chris", self.ivFoto.image!,
+        Rest.loadData("12345", "IOs Chris", self.ivFoto.image!,
                       onComplete: {(respostaRest) in
                     let resp = respostaRest
                      print(resp.id)
                     DispatchQueue.main.async {
-                      print("id inserido")
+                        self.lbMensagem.text = "Ultimo id inserido : \(resp.id)"
                     }
                     self.removeSpinner()
         
